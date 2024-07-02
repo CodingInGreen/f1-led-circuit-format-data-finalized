@@ -16,7 +16,7 @@ pub struct UpdateFrame {
 #[derive(Debug)]
 pub struct VisualizationData {
     pub update_rate_ms: u32,
-    pub frames: [UpdateFrame; 10], // Adjusted for 10 frames for demo purposes
+    pub frames: [UpdateFrame; 1378], // Adjusted for 10 frames for demo purposes
 }
 
 #[derive(Debug)]
@@ -71,7 +71,7 @@ fn main() {
     }
 
     let mut frames: Vec<UpdateFrame> = Vec::new();
-    let total_frames = 10; // Adjusted for 10 frames for demo purposes
+    let total_frames = 1378; // Adjusted for 10 frames for demo purposes
 
     // Sort timestamps to maintain sequential order
     let mut sorted_timestamps: Vec<String> = timestamp_map.keys().cloned().collect();
