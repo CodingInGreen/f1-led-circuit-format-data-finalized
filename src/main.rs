@@ -16,7 +16,7 @@ pub struct UpdateFrame {
 #[derive(Debug)]
 pub struct VisualizationData {
     pub update_rate_ms: u32,
-    pub frames: [UpdateFrame; 1378], // Adjusted for 10 frames for demo purposes
+    pub frames: [UpdateFrame; 5003],
 }
 
 #[derive(Debug)]
@@ -26,7 +26,7 @@ pub struct DriverDataWithTimestamp {
 }
 
 fn main() {
-    let file = File::open("processed_short_sample_race_data.csv").expect("Cannot open file");
+    let file = File::open("processed_race_data_all_remove_front_0s_end_stack_overflow_100k.csv").expect("Cannot open file");
     let reader = BufReader::new(file);
 
     let mut driver_data_vec: Vec<DriverDataWithTimestamp> = Vec::new();
@@ -71,7 +71,7 @@ fn main() {
     }
 
     let mut frames: Vec<UpdateFrame> = Vec::new();
-    let total_frames = 1378; // Adjusted for 10 frames for demo purposes
+    let total_frames = 5003; // Adjusted for 10 frames for demo purposes
 
     // Sort timestamps to maintain sequential order
     let mut sorted_timestamps: Vec<String> = timestamp_map.keys().cloned().collect();
