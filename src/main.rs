@@ -26,7 +26,7 @@ pub struct DriverDataWithTimestamp {
 }
 
 fn main() {
-    let file = File::open("processed_race_data_all_remove_front_0s_end_stack_overflow_100k.csv").expect("Cannot open file");
+    let file = File::open("processed_race_data_all_remove_front_back_0s_end_stack_overflow_100k.csv").expect("Cannot open file");
     let reader = BufReader::new(file);
 
     let mut driver_data_vec: Vec<DriverDataWithTimestamp> = Vec::new();
